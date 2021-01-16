@@ -23,15 +23,12 @@ public class Task4 {
 
         float b;
         Scanner sc2 = new Scanner(System.in);
-        System.out.println("Введите 2-е число (любое кроме 0)");
+        System.out.println("Введите 2-е число");
         if (sc2.hasNextFloat()) {
             b = sc2.nextFloat();
             sc1.close();
             sc2.close();
-            if (a == 0) {
-                System.out.println("Для данного числа задача невыполнима");
-                return;
-            }
+
         } else {
             System.out.println("Вы ввели некорректные данные");
             return;
