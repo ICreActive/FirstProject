@@ -1,35 +1,42 @@
 package Shku.FirstTask;
 
-import com.sun.source.tree.IfTree;
-
 import javax.swing.*;
 
 public class Task2 {
     public static void main(String[] args) {
 
-        double Number1;
-        double Number2;
-        double Choice;
-        String UserChoice;
+        double number1;
+        double number2;
+        double choice;
+        String userChoice;
 
         do {
 
-            UserChoice = JOptionPane.showInputDialog("Введите любое число");
-            if (!UserChoice.matches("[0-9]+")) continue;
-            Choice = Double.parseDouble(UserChoice);
-            Number1 = 1;
-            Number2 = 100;
-            if (Choice < Number1) {
-                System.out.println("Ваше число относится к первому диапазону");
-            } else if (Choice > Number1 && Choice < Number2) {
-                System.out.println("Ваше число относится ко второму диапазону");
+            userChoice = JOptionPane.showInputDialog("Введите любое число");
+            if (userChoice == null) {
+                JOptionPane.showMessageDialog(
+                        null,
+                        "Слабак",
+                        "Оценка",
+                        JOptionPane.INFORMATION_MESSAGE);
+                return;
+            } else {
+                if (!userChoice.matches("[0-9]+")) continue;
+                choice = Double.parseDouble(userChoice);
+
+                number1 = 1;
+                number2 = 100;
+                if (choice < number1) {
+                    System.out.println("Ваше число относится к первому диапазону");
+                } else if (choice > number1 && choice < number2) {
+                    System.out.println("Ваше число относится ко второму диапазону");
+                } else if (choice > number2) {
+                    System.out.println("Ваше число относится к третьему диапазону");
+                } else {
+                    System.out.println("Число находится на границе диапозонов");
+                }
             }
-            else if (Choice > Number2) {
-                System.out.println("Ваше число относится к третьему диапазону");
-            }
-            else  {
-                System.out.println("Число находится на границе диапозонов");
-            }
+
         } while (true);
 
     }
