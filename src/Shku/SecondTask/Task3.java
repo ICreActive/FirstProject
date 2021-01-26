@@ -9,14 +9,14 @@ public class Task3 {
 
     int a = 5;
     int c = 0;
-    int Choice;
-    String UserChoice;
+    int choice;
+    String userChoice;
 
     while (c < 3) {
-        UserChoice = JOptionPane.showInputDialog(null,
+        userChoice = JOptionPane.showInputDialog(null,
                 "Какое число от 1 до 10 мое любимое? У тебя 3 попытки",
                 "Угадаешь?", JOptionPane.INFORMATION_MESSAGE);
-        if (UserChoice == null) {
+        if (userChoice == null) {
             JOptionPane.showMessageDialog(
                     null,
                     "Слабак",
@@ -25,9 +25,9 @@ public class Task3 {
             return;
 
         } else {
-            Choice = Integer.parseInt(UserChoice);
+            choice = Integer.parseInt(userChoice);
 
-            if (Choice != a) {
+            if (choice != a) {
                 System.out.println("Не угадал");
 
             } else {

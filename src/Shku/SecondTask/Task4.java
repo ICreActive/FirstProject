@@ -7,29 +7,38 @@ public class Task4 {
 
     public static void main(String[] args) {
 
-        String UserChoice;
+        String userChoice;
 
-        UserChoice = JOptionPane.showInputDialog(
+        userChoice = JOptionPane.showInputDialog(
                 null,
                 "Введите любое число от 0 до 100",
                 "Угадайка",
                 JOptionPane.INFORMATION_MESSAGE);
+        if (userChoice == null) {
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Жаль",
+                    "Ну ладно",
+                    JOptionPane.INFORMATION_MESSAGE);
+            return;
+        } else {
 
-        int Choice = Integer.parseInt(UserChoice);
+            int choice = Integer.parseInt(userChoice);
 
-        int Counter = 0;
-        int yourNumber;
+            int counter = 0;
+            int yourNumber;
 
-        do {
-            Random random = new Random();
-            yourNumber = random.nextInt(101);
-            Counter++;
+            do {
+                Random random = new Random();
+                yourNumber = random.nextInt(101);
+                counter++;
 
+            }
+            while (yourNumber != choice);
+
+            System.out.println("Вы загадали цифру: " + yourNumber);
+            System.out.println("Количество попыток: " + counter);
         }
-        while (yourNumber != Choice);
-
-        System.out.println("Вы загадали цифру: " + yourNumber);
-        System.out.println("Количество попыток: " + Counter);
 
 
     }
