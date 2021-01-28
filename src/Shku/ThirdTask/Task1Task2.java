@@ -3,7 +3,7 @@ package Shku.ThirdTask;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Task1 {
+public class Task1Task2 {
 
     public static void main(String[] args) {
 
@@ -31,8 +31,12 @@ public class Task1 {
             sb.append(rdNumber1).append(" ");
         }
         System.out.println("method StringBuilder: " + sb);
+
+        // Task2
+        String string = sb.toString();
+        String task2 = string.replaceAll("^\\d{2} | \\d{2} | \\d{2}$", " -1 ");
+        System.out.println("Replaced: " + task2);
+
     }
 
-
 }
-
