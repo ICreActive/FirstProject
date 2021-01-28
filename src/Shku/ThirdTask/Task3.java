@@ -7,12 +7,13 @@ public class Task3 {
     public static void main(String[] args) {
 
 
-        System.out.print("Enter your name:");
+        System.out.print("Enter your name: ");
 
         Scanner scanner = new Scanner(System.in);
         String userName = scanner.nextLine();
+        userName=userName.replaceAll("^ *| *$", "");
 
-        System.out.print("How old are you:");
+        System.out.print("How old are you: ");
         Scanner scanner1 = new Scanner(System.in);
         String userOld = scanner1.nextLine();
         scanner.close();
