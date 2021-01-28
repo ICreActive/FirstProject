@@ -10,11 +10,9 @@ public class Task4 {
         String[] words = str.split(" ");
         for (String word : words) {
 
-            word = word.toLowerCase();
             int count = 0;
-
-            for (int i = 0; i < words.length; i++) {
-                if (words[i].equalsIgnoreCase(word)) {
+            for (String s : words) {
+                if (s.equalsIgnoreCase(word)) {
                     count++;
                 }
             }
